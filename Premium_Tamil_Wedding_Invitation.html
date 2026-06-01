@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>கேசவன் ❤️ ரம்யா - திருமண அழைப்பிதழ்</title>
+<style>
+body{margin:0;font-family:'Noto Sans Tamil',sans-serif;background:linear-gradient(#fff8e1,#ffe0b2);text-align:center;color:#5d4037}
+.hero{padding:40px 20px}
+h1{font-size:42px}
+.card{background:#fff;margin:20px auto;max-width:800px;padding:20px;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.photos{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.photos img{width:260px;max-width:90%;border-radius:15px}
+.flower{position:fixed;top:-10px;animation:fall linear infinite;color:#d4af37}
+@keyframes fall{to{transform:translateY(105vh)}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>💐 திருமண அழைப்பிதழ் 💐</h1>
+<h2>கேசவன் ❤️ ரம்யா</h2>
+<p>எங்களின் இனிய திருமண விழாவில் தாங்கள் குடும்பத்துடன் கலந்து கொண்டு மணமக்களை ஆசீர்வதிக்குமாறு அன்புடன் அழைக்கிறோம்.</p>
+</div>
+
+<div class="card">
+<h2>📅 திருமண நாள்</h2>
+<p>13 செப்டம்பர் 2026</p>
+<p>🕗 காலை 8:00 மணி – 9:00 மணி</p>
+<p>📍 46, புதூர், ஈரோடு</p>
+</div>
+
+<div class="card">
+<h2>📸 மணமக்கள்</h2>
+<p>இந்த கோப்பை GitHub/Netlify-ல் ஏற்றிய பின் உங்கள் புகைப்படங்களை சேர்க்கலாம்.</p>
+</div>
+
+<div class="card">
+<h2>⏳ திருமண கவுண்டவுன்</h2>
+<div id="count"></div>
+</div>
+
+<div class="card">
+<h2>🙏 வருகை தந்து மணமக்களை ஆசீர்வதிக்குமாறு அன்புடன் கேட்டுக்கொள்கிறோம்</h2>
+</div>
+
+<script>
+for(let i=0;i<25;i++){
+ let f=document.createElement('div');
+ f.className='flower';
+ f.innerHTML='🌸';
+ f.style.left=Math.random()*100+'vw';
+ f.style.animationDuration=(5+Math.random()*8)+'s';
+ document.body.appendChild(f);
+}
+const target=new Date("2026-09-13T08:00:00").getTime();
+setInterval(()=>{
+ const now=new Date().getTime();
+ const d=target-now;
+ const days=Math.floor(d/(1000*60*60*24));
+ document.getElementById('count').innerHTML=days+" நாட்கள் மீதம்";
+},1000);
+</script>
+</body>
+</html>
